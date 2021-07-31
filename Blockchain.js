@@ -15,9 +15,10 @@ module.exports = class Blockchain {
     }
     newBlock(timestamp, data) {
         var tempBlock = new Block(this.lastIndex(), timestamp, data, "0");
-        tempBlock.nextHash = this.lastBlock().hash;
+        tempBlock.prevHash = this.lastBlock().hash;
         tempBlock.hash = tempBlock.computeHash();
         this.chain.push(tempBlock);
+        return true;
     }
     isValidChain() {
         for (let i = 1; i < this.chain.length; i++) {
@@ -27,7 +28,7 @@ module.exports = class Blockchain {
             if (currentBlock.hash !== currentBlock.computeHash()) {
                 return false;
             }
-            if (currentBlock.nextHash !== nextBlock.hash) {
+            if (currentBlock.prevHash !== nextBlock.hash) {
                 return false;
             }
         }

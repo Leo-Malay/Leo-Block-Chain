@@ -1,0 +1,26 @@
+{
+    "name": "leo-block-chain",
+    "version": "1.0.0",
+    "description": "Implementation of Blockchain using NodeJS",
+    "main": "Index.js",
+    "dependencies": {
+        "crypto-js": "^4.1.1",
+        "express": "^4.17.1",
+        "ip": "^1.1.5",
+        "mongodb": "^4.0.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "node Index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Leo-Malay/Leo-Block-Chain.git"
+    },
+    "author": "Malay Bhavsar",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Leo-Malay/Leo-Block-Chain/issues"
+    },
+    "homepage": "https://github.com/Leo-Malay/Leo-Block-Chain#readme"
+}
